@@ -204,6 +204,7 @@ main {
 .our-numbers-numbers {
     width: 100px;
     text-align: center;
+    font-weight: bold;
 }
 
 .our-numbers-icon {

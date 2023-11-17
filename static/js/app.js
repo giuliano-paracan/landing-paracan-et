@@ -53,7 +53,7 @@ const elementToAnimate = document.querySelector(".our-numbers");
 observer.observe(elementToAnimate);
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
+  if (window.scrollY > 0) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
