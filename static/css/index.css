@@ -50,8 +50,8 @@ nav.navbar {
 header {
     width: 100%;
     /* background-image: url('/static/img/main-image.webp'); */
-    background-image: url('/static/img/itaipu-crypto.webp');
-    /* background-image: url('/landing-paracan/static/img/itaipu-crypto.webp'); */
+    /* background-image: url('/static/img/itaipu-crypto.webp'); */
+    background-image: url('/landing-paracan/static/img/itaipu-crypto.webp');
     background-size: 1520px;
     margin-bottom: 40px;
 }
@@ -359,7 +359,7 @@ li .our-brands-img {
     padding: 0px 100px;
     padding-top: 40px;
     padding-bottom: 40px;
-    height: 250px;
+    height: 180px;
     gap: 15px;
     background-color: var(--dark-primary-color);
 }
@@ -400,21 +400,49 @@ footer {
     align-items: center;
 }
 
-#coin-price-container {
+.coin-price {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0px 45px;
     gap: 15px;
-    height: 40px;
+    height: 50px;
     background-color: #eaeaea;
     box-shadow: rgba(0, 0, 0, 0.2) 0px -20px 36px -28px inset;
+}
+
+.coin-price-coin {
+    font-weight: bold;
 }
 
 .coin-price-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
+}
+
+.fa-bitcoin-sign, .fa-litecoin-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    color: white;
+}
+
+.fa-bitcoin-sign {
+    background-color: #ef8e19;
+}
+
+.fa-litecoin-sign {
+    background-color: #325a98;
+}
+
+.disable {
+    display: none !important;
 }
 
 /* make media queries */
@@ -541,5 +569,14 @@ footer {
 
     nav.navbar {
         position: static;
+    }
+
+    .coin-price {
+        justify-content: center;
+        font-size: 0.9rem;
+    }
+    
+    .coin-price-container {
+        gap: 5px
     }
 }

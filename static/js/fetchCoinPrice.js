@@ -1,13 +1,19 @@
 const coinPriceContainer = document.getElementById("coin-price-container");
 
 function fetchCoinsPrice() {
+  coinPriceContainer.innerHTML = `
+    <div class="coin-price-container">
+      ...loading
+    </div>
+  `
+  
   fetch("https://api.minerstat.com/v2/coins?list=BTC,LTC")
     .then((response) => response.json())
     .then((data) => {
       let content = "";
-      console.log(data)
+
       data.forEach((coin) => {
-        console.log(coin)
+        console.log(coin);
         const price = coin.price.toFixed(2);
         content += `
                 <div class="coin-price-container">
@@ -23,7 +29,9 @@ function fetchCoinsPrice() {
 
       coinPriceContainer.innerHTML = content;
     })
-    .catch((error) => {});
+    .catch(() => {
+      coinPriceContainer.classList.add("disable");
+    });
 }
 
 fetchCoinsPrice();
