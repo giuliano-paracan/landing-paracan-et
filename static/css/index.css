@@ -19,22 +19,38 @@ body {
 }
 
 nav img#paracan-logo {
-    width: 190px;
+    width: 240px;
     object-fit: contain;
+    transition: 0.2s all ease;
 }
 
 nav.navbar {
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 10px 30px;
+    padding: 20px 30px;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: 1s all ease;
+}
+
+.scrolled {
+    padding: 10px 30px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.scrolled img#paracan-logo {
+    width: 190px;
 }
 
 header {
     width: 100%;
-    background-image: url('/static/img/header-background.jpg');
-    background-size: 2000px;
+    /* background-image: url('/static/img/main-image.webp'); */
+    background-image: url('/static/img/itaipu-crypto.webp');
+    background-size: 1520px;
     margin-bottom: 40px;
 }
 
@@ -45,7 +61,13 @@ header {
     align-items: flex-start;
     padding: 0px 100px;
     height: 700px;
-    color: white;
+    color: black;
+}
+
+.header-background {
+    background-color: rgba(255, 255, 255, 0.70);
+    padding: 40px;
+    border-radius: var(--primary-border-radius);
 }
 
 .header-title {
@@ -55,8 +77,9 @@ header {
 }
 
 .header-title b {
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    color: white;
+    background-color: black;
 }
 
 .header-desc {
@@ -95,9 +118,8 @@ header {
 
 .country-img {
     object-fit: contain;
-    width: 600px;
+    width: 450px;
     border-radius: var(--primary-border-radius);
-    box-shadow: var(--primary-box-shadow);
 }
 
 .img-link {
@@ -148,6 +170,47 @@ main {
     align-items: center;
     margin-top: 20px;
     width: 100%;
+}
+
+.our-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.our-numbers-container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.4rem;
+
+    border-radius: var(--primary-border-radius);
+    box-shadow: var(--primary-box-shadow);
+
+}
+
+.our-numbers-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.our-numbers-numbers {
+    width: 100px;
+    text-align: center;
+}
+
+.our-numbers-icon {
+    font-size: 4rem;
+    background: -webkit-linear-gradient(9deg, #5dadbd, var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .our-services {
