@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paracan</title>
 
-    <link rel="icon" href="/landing-paracan/static/img/favicon.png" />
+    <link rel="icon" href="/landing-page/static/img/favicon.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,22 +22,27 @@
     ></script>
 
     <!-- Styles  -->
-    <link rel="stylesheet" href="/landing-paracan/static/css/divider.css" />
-    <link rel="stylesheet" href="/landing-paracan/static/css/index.css" />
+    <link rel="stylesheet" href="/landing-page/static/css/divider.css" />
+    <link rel="stylesheet" href="/landing-page/static/css/index.css" />
 
     <!-- Scripts -->
   </head>
   <body>
+    <div id="coin-price-container">
+
+    </div>
+
     <nav class="navbar">
       <a href="/" class="img-link">
         <img
-          src="/landing-paracan/static/img/paracan-logo.png"
+          src="/landing-page/static/img/paracan-logo.png"
           alt="paracan-logo"
           id="paracan-logo"
         />
       </a>
       <ul class="links">
-        <li><a href="#our-services">Our services</a></li>
+        <li><a href="#our-services">How we provide value</a></li>
+        <li><a href="#our-brands">Our Partners</a></li>
         <li><a href="#contact-us">Contact</a></li>
       </ul>
     </nav>
@@ -112,14 +117,14 @@
       <article class="country">
         <div class="contry-header">
           <h2 class="country-title">
-            Datacenters located in Paraguay
+            Our infrastructure is located in Paraguay
             <!-- <p class="py">Paraguay</p> -->
           </h2>
           <p class="country-desc">
-            Paracan is committed to building Latin America's largest sustainable
-            digital asset mining platform. With a specific focus on
-            vertical-integration, the company has prioritized renewable energy
-            at its developed sites.
+            Paracan Ltd. is committed to building Latin America's largest
+            sustainable digital asset mining platform. With a specific focus on
+            vertical-integration, the company has prioritized 100% renewable
+            energy.
           </p>
         </div>
         <img
@@ -135,10 +140,10 @@
 
       <article class="our-services" id="our-services">
         <section class="our-services_header">
-          <h2 class="our-services_header_title">Our services</h2>
+          <h2 class="our-services_header_title">How we provide value</h2>
           <p class="our-services_header_desc">
-            Specialized technical services, good management practices, automated
-            incident management systems, and datacenter monitoring.
+            Specialized Technical Services, Innovation, Industry Good Practices,
+            Automated Management Systems and Mining Monitoring Centers.
           </p>
         </section>
         <section class="our-services__body">
@@ -225,7 +230,7 @@
         </div>
         <div class="latest-numbers-card">
           <img
-            src="/landing-paracan/static/img/post1.jpg"
+            src="/landing-page/static/img/post1.jpg"
             alt="paracan-post-1"
             class="latest-numbers-img-left"
             width="360px"
@@ -260,7 +265,7 @@
             </div>
           </div>
           <img
-            src="/landing-paracan/static/img/post2.jpg"
+            src="/landing-page/static/img/post2.jpg"
             alt="paracan-post-2"
             class="latest-numbers-img-right"
             width="360px"
@@ -269,7 +274,7 @@
         </div>
         <div class="latest-numbers-card">
           <img
-            src="/landing-paracan/static/img/post3.jpg"
+            src="/landing-page/static/img/post3.jpg"
             alt="paracan-post-3"
             class="latest-numbers-img-left"
             width="360px"
@@ -296,12 +301,12 @@
         <div class="shadow"></div>
       </div>
 
-      <article class="our-brands">
+      <article class="our-brands" id="our-brands">
         <h2 class="out-brands-title">Our Partners</h2>
         <ul class="our-brands-container">
           <li>
             <img
-              src="/landing-paracan/static/img/client1.png"
+              src="/landing-page/static/img/client1.png"
               class="our-brands-img"
               width="100px"
               alt="cisco logo"
@@ -309,7 +314,7 @@
           </li>
           <li>
             <img
-              src="/landing-paracan/static/img/client2.png"
+              src="/landing-page/static/img/client2.png"
               class="our-brands-img"
               width="130px"
               alt="ubiquiti logo"
@@ -317,7 +322,7 @@
           </li>
           <li>
             <img
-              src="/landing-paracan/static/img/client3.png"
+              src="/landing-page/static/img/client3.png"
               class="our-brands-img"
               width="170px"
               alt="bitmain logo"
@@ -325,7 +330,7 @@
           </li>
           <li>
             <img
-              src="/landing-paracan/static/img/client4.png"
+              src="/landing-page/static/img/client4.png"
               class="our-brands-img"
               width="170px"
               alt="microbt logo"
@@ -333,7 +338,7 @@
           </li>
           <li>
             <img
-              src="/landing-paracan/static/img/client5.png"
+              src="/landing-page/static/img/client5.png"
               class="our-brands-img"
               width="180px"
               alt="innosilicon logo"
@@ -341,7 +346,7 @@
           </li>
           <li>
             <img
-              src="/landing-paracan/static/img/client6.png"
+              src="/landing-page/static/img/client6.png"
               class="our-brands-img"
               width="190px"
               alt="honeywell logo"
@@ -353,13 +358,14 @@
 
     <article class="contact-us" id="contact-us">
       <h1 class="contact-us-title">Ready to Get Started?</h1>
-      <a href="mailto:info@paracan.com.py" class="contact-us-link"
+      <a href="mailto:customer.care@paracan.com" class="contact-us-link"
         >Contact us</a
       >
     </article>
 
     <footer>Copyright © Paracan 2023</footer>
 
-    <script src="/landing-paracan/static/js/app.js"></script>
+    <script src="/landing-page/static/js/app.js"></script>
+    <script src="/landing-page/static/js/fetchCoinPrice.js"></script>
   </body>
 </html>

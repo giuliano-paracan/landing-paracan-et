@@ -16,6 +16,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 nav img#paracan-logo {
@@ -49,8 +50,8 @@ nav.navbar {
 header {
     width: 100%;
     /* background-image: url('/static/img/main-image.webp'); */
-    /* background-image: url('/static/img/itaipu-crypto.webp'); */
-    background-image: url('/landing-paracan/static/img/itaipu-crypto.webp');
+    background-image: url('/static/img/itaipu-crypto.webp');
+    /* background-image: url('/landing-paracan/static/img/itaipu-crypto.webp'); */
     background-size: 1520px;
     margin-bottom: 40px;
 }
@@ -399,8 +400,27 @@ footer {
     align-items: center;
 }
 
+#coin-price-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 45px;
+    gap: 15px;
+    height: 40px;
+    background-color: #eaeaea;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -20px 36px -28px inset;
+}
+
+.coin-price-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 /* make media queries */
 @media screen and (max-width: 1200px) {
+    
+
     nav.navbar {
         flex-direction: column;
     }
@@ -471,7 +491,7 @@ footer {
         text-align: center;
     }
 
-    .latest-numbers-desc { 
+    .latest-numbers-desc {
         font-size: 0.8rem;
         width: 340px;
     }
@@ -498,12 +518,28 @@ footer {
         padding: 0px 50px;
     }
 
-    .latest-numbers-img-left, .latest-numbers-img-right {
+    .latest-numbers-img-left,
+    .latest-numbers-img-right {
         width: 300px;
         border-top-right-radius: var(--primary-border-radius);
         border-top-left-radius: var(--primary-border-radius);
 
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
+    }
+
+    .our-numbers {
+        flex-direction: column;
+        padding: 0px 90px;
+    }
+
+    header {
+        background-size: 1500px;
+        height: 800px;
+        background-position: left 700px top 800px;        
+    }
+
+    nav.navbar {
+        position: static;
     }
 }
