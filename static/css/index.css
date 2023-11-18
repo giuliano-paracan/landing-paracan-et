@@ -50,8 +50,8 @@ nav.navbar {
 header {
     width: 100%;
     /* background-image: url('/static/img/main-image.webp'); */
-    /* background-image: url('/static/img/itaipu-crypto.webp'); */
-    background-image: url('/landing-paracan/static/img/itaipu-crypto.webp');
+    background-image: url('/static/img/itaipu-crypto.webp');
+    /* background-image: url('/landing-paracan/static/img/itaipu-crypto.webp'); */
     background-size: 1520px;
     margin-bottom: 40px;
 }
@@ -101,6 +101,7 @@ header {
 .country-title {
     font-size: 2rem;
     font-weight: bold;
+    padding-bottom: 20px;
 }
 
 .country-title .py {
@@ -227,6 +228,10 @@ main {
 
 .our-services_header * {
     text-align: center;
+}
+
+.our-services_header_title {
+    margin-bottom: 20px;
 }
 
 .our-services__body {
@@ -356,12 +361,11 @@ li .our-brands-img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 100px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 180px;
+    /* padding: 0px 100px; */
+    /* padding-top: 40px; */
+    /* padding-bottom: 40px; */
+    /* height: 180px; */
     gap: 15px;
-    background-color: var(--dark-primary-color);
 }
 
 .contact-us-title {
@@ -392,9 +396,43 @@ li .our-brands-img {
 footer {
     background-color: var(--dark-secondary-color);
     color: white;
-    height: 60px;
     font-weight: bold;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 50px;
+    background-color: var(--dark-primary-color);
+    gap: 30px;
+}
 
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+
+footer div {
+    width: 300px;
+    display: grid;
+    place-items: center;
+}
+
+footer div.footer-address {
+    font-size: 15px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+footer div.footer-address i {
+    font-size: 20px;
+}
+
+.navbar article {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,15 +442,17 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 45px;
     gap: 15px;
     height: 50px;
-    background-color: #eaeaea;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px -20px 36px -28px inset;
+    text-decoration: none;
+}
+
+.coin-price-name {
+    font-weight: bold;
 }
 
 .coin-price-coin {
-    font-weight: bold;
+    color: gray;
 }
 
 .coin-price-container {
@@ -578,5 +618,28 @@ footer {
     
     .coin-price-container {
         gap: 5px
+    }
+
+    footer {
+        height: 340px;
+    }
+
+    .footer-info {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .footer-address, .footer-copyright {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 400px;
+    }
+
+    .footer-address {
+        width: 250px;
+    }
+
+    .navbar article {
+        flex-direction: column;
     }
 }
