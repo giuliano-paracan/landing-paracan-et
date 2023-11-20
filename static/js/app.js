@@ -47,15 +47,3 @@ const observer = new IntersectionObserver(async (entries, observer) => {
     }
   });
 });
-
-// observe the element you want to trigger the animation
-const elementToAnimate = document.querySelector(".our-numbers");
-observer.observe(elementToAnimate);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 0) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
