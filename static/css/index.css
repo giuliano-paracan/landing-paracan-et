@@ -512,8 +512,7 @@ footer div.footer-address i {
     }
 
     .links li {
-        padding: 0px;
-        margin: 0px 20px;
+        padding: 10px;
     }
 
     nav.navbar {
@@ -604,6 +603,7 @@ footer div.footer-address i {
         font-size: 1.5rem;
         text-align: center;
         padding-bottom: 5px;
+        width: 300px;
     }
 
     .country-desc {
@@ -625,11 +625,6 @@ footer div.footer-address i {
         border-bottom-right-radius: 0px;
     }
 
-    .our-numbers {
-        flex-direction: column;
-        padding: 0px 90px;
-    }
-
     header {
         background-size: 1500px;
         height: 800px;
@@ -638,11 +633,13 @@ footer div.footer-address i {
 
     nav.navbar {
         position: static;
+        height: auto;
     }
 
     .coin-price {
         justify-content: center;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        gap: 10px;
     }
 
     .coin-price-container {
@@ -679,9 +676,10 @@ footer div.footer-address i {
     }
 
     .our-numbers {
+        padding: 0px 60px;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 10px;
         height: 550px;
         padding-top: 30px;
         padding-bottom: 30px;
