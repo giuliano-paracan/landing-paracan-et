@@ -40,7 +40,7 @@ nav.navbar {
 
 header {
     width: 100%;
-    background-image: url('/static/img/itaipu-crypto.webp');
+    background-image: url('/landing-paracan/static/img/itaipu-crypto.webp');
     background-size: 1520px;
     margin-bottom: 40px;
 }
@@ -219,7 +219,7 @@ main {
     margin-top: 20px;
     margin-bottom: 40px;
 
-    background-image: url('/static/img/main-image.png');
+    background-image: url('/landing-paracan/static/img/main-image.png');
     background-position: bottom;
     height: 700px;
 }
