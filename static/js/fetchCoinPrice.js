@@ -5,9 +5,19 @@ function fetchCoinsPrice() {
     <div class="coin-price-container">
       ...loading
     </div>
-  `
-  
-  fetch("https://api.minerstat.com/v2/coins?list=BTC,LTC")
+  `;
+
+  // Promise.all([
+  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD"),
+  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD"),
+  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD"),
+  // ]).then((responses) =>
+  //   Promise.all(responses.map((response) => response.json())).then((data) => {
+  //     console.log(data);
+  //   })
+  // );
+
+  fetch("https://api.minerstat.com/v2/coins?list=BTC,LTC,ETH")
     .then((response) => response.json())
     .then((data) => {
       let content = "";
@@ -15,7 +25,10 @@ function fetchCoinsPrice() {
       data.forEach((coin) => {
         console.log(coin);
         const price = coin.price.toFixed(2);
-        const formattedPrice = parseFloat(price).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const formattedPrice = parseFloat(price).toLocaleString("de-DE", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        });
         content += `
                 <div class="coin-price-container">
                     <div class="coin-price-coin">
@@ -28,7 +41,30 @@ function fetchCoinsPrice() {
             `;
       });
 
-      coinPriceContainer.innerHTML = content;
+      fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
+        .then((response) => response.json())
+        .then((data) => {
+          const price = data.USD.toFixed(2);
+          const formattedPrice = parseFloat(price).toLocaleString("de-DE", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          });
+          content += `
+            <div class="coin-price-container">
+                <div class="coin-price-coin">
+                    <i class="fa-brands fa-ethereum"></i>
+                </div>
+                <div class="coin-price-name">Ethereum</div>
+                <div class="coin-price-coin">ETH</div>
+                <div class="coin-price-price">$${formattedPrice}</div>
+            </div>
+          `;
+
+          coinPriceContainer.innerHTML = content;
+        })
+        .catch(() => {
+          coinPriceContainer.classList.add("disable");
+        });
     })
     .catch(() => {
       coinPriceContainer.classList.add("disable");
