@@ -602,6 +602,10 @@ footer div.footer-address i {
         width: 270px;
     }
 
+    .card-title {
+        text-align: center;
+    }
+
     .country-card-container {
         grid-template-columns: 1fr;
     }
