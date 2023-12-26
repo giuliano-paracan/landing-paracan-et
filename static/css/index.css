@@ -192,11 +192,6 @@ main {
 }
 
 .our-numbers {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
     margin-top: 20px;
     margin-bottom: 40px;
 
@@ -204,6 +199,14 @@ main {
     background-position: bottom;
     height: 700px;
     width: 100%;
+}
+
+.our-numbers-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .our-numbers-container {
@@ -223,7 +226,8 @@ main {
     width: 240px;
 }
 
-.our-numbers-container:hover {
+.our-numbers-container:hover,
+.vision-card:hover {
     background-color: rgba(229, 229, 229, 0.9);
     box-shadow: var(--primary-box-shadow);
 }
@@ -246,6 +250,13 @@ main {
     width: 120px;
     border-radius: 50%;
     box-shadow: var(--primary-box-shadow);
+}
+
+.vision-card {
+    background-color: rgba(228, 228, 228, 0.803);
+    border-radius: var(--primary-border-radius);
+    padding: 40px;
+    transition: 0.9s all ease;
 }
 
 .our-services {
