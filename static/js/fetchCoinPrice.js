@@ -1,5 +1,17 @@
 const coinPriceContainer = document.getElementById("coin-price-container");
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'nearest'
+    });
+  });
+});
+
 function fetchCoinsPrice() {
   coinPriceContainer.innerHTML = `
     <div class="coin-price-container">

@@ -110,7 +110,10 @@ header {
 }
 
 .vision-values-item {
-    margin: 40px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .vision-and-values-header {
@@ -118,8 +121,19 @@ header {
     margin-bottom: 15px;
 }
 
-.vision-and-values-header h2 {
+.vision-and-values-header {
     font-size: 2rem;
+}
+
+.vision-and-values-body {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+div.vision-and-values-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
 .vision-and-values-body p {
@@ -149,7 +163,6 @@ header {
     align-items: center;
     height: 100%;
     cursor: pointer;
-    padding: 15px;
     transition: all .2s ease;
 }
 
@@ -161,6 +174,7 @@ header {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    padding: 15px;
 
     transition: all .2s ease;
 }
@@ -248,24 +262,24 @@ main {
 }
 
 .our-services_header_title {
-    margin-bottom: 20px;
     font-size: 2rem;
 }
 
 .our-services__body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: left;
     align-items: center;
 
-    max-width: 290px;
-    height: 260px;
+    gap: 35px;
+    max-width: 600px;
+    height: 300px;
     padding: 20px;
 
     border: 1px solid #5ebfc5;
@@ -273,6 +287,14 @@ main {
     box-shadow: var(--primary-box-shadow);
 
     transition: .5s all ease;
+}
+
+.vision-and-values-body .card {
+    max-width: 400px;
+}
+
+.vision-and-values-body .card-body {
+    font-size: 1.2rem;
 }
 
 .card:hover {
@@ -285,14 +307,15 @@ main {
     justify-content: flex-end;
     align-items: center;
 
-    font-size: 1.15rem;
+    padding-top: 45px;
+    font-size: 1.7rem;
     font-weight: bold;
-    height: 50px;
+    height: 20px;
 }
 
 .card-body {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     height: 110px;
 }
 
@@ -354,6 +377,10 @@ main {
     gap: 30px;
 
     border-radius: var(--primary-border-radius);
+}
+
+.our-brands-title {
+    font-size: 2rem;
 }
 
 .our-brands-container {
