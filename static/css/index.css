@@ -199,6 +199,10 @@ main {
     background-position: bottom;
     height: 700px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .our-numbers-cards {
@@ -207,6 +211,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    width: 92%;
 }
 
 .our-numbers-container {
@@ -217,7 +222,7 @@ main {
     align-items: center;
     gap: 10px;
     font-size: 1.4rem;
-    background-color: rgba(255, 255, 255, 0.70);
+    background-color: rgba(228, 228, 228, 0.803);
     height: 300px;
 
     border-radius: var(--primary-border-radius);
@@ -257,6 +262,7 @@ main {
     border-radius: var(--primary-border-radius);
     padding: 40px;
     transition: 0.9s all ease;
+    width: 92%;
 }
 
 .our-services {
