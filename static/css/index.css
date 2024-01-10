@@ -40,7 +40,7 @@ nav.navbar {
 
 header {
     width: 100%;
-    background-image: url('/landing-paracan/static/img/itaipu-crypto.webp');
+    background-image: url('/static/img/itaipu-crypto.webp');
     background-size: 1520px;
     margin-bottom: 40px;
 }
@@ -195,7 +195,7 @@ main {
     margin-top: 20px;
     margin-bottom: 40px;
 
-    background-image: url('/landing-paracan/static/img/main-image.png');
+    background-image: url('/static/img/main-image.png');
     background-position: bottom;
     height: 700px;
     width: 100%;
@@ -595,12 +595,12 @@ footer div.footer-address i {
     }
 
     .header-title {
-        font-size: 1rem;
+        font-size: 1.4rem;
         width: 270px;
     }
 
     .header-desc {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         width: 270px;
     }
 
@@ -651,6 +651,10 @@ footer div.footer-address i {
         text-align: center;
     }
 
+    video {
+        width: 350px;
+    }
+
     .latest-numbers-desc {
         font-size: 0.8rem;
         width: 340px;
@@ -687,6 +691,31 @@ footer div.footer-address i {
     nav.navbar {
         position: static;
         height: auto;
+    }
+
+    .vision-and-values-header {
+        font-size: 1.4rem;
+    }
+
+    .vision-card {
+        width: 510px;
+        padding: 30px;
+    }
+
+    p.vision-and-values-body {
+        font-size: 1.1rem;
+    }
+
+    div.vision-and-values-body {
+        grid-template-columns: 1fr;        
+    }
+
+    div.vision-and-values-body .card-title {
+        font-size: 1.4rem;
+    }
+
+    div.vision-and-values-body .card-body {
+        font-size: 1.1rem;
     }
 
     .coin-price {
@@ -736,13 +765,26 @@ footer div.footer-address i {
         flex-direction: column;
     }
 
+    .card-title {
+        font-size: 1.4rem;
+    }
+
+    .card-body {
+        font-size: 0.95rem;
+    }
+
+    .our-numbers-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
     .our-numbers {
-        padding: 0px 60px;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 10px;
-        height: 550px;
-        padding-top: 30px;
+        height: 800px;
+        /* padding-top: 30px; */
         padding-bottom: 30px;
     }
 
