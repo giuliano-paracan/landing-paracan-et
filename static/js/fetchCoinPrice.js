@@ -19,16 +19,6 @@ function fetchCoinsPrice() {
     </div>
   `;
 
-  // Promise.all([
-  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD"),
-  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD"),
-  //   fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD"),
-  // ]).then((responses) =>
-  //   Promise.all(responses.map((response) => response.json())).then((data) => {
-  //     console.log(data);
-  //   })
-  // );
-
   fetch("https://api.minerstat.com/v2/coins?list=BTC,LTC,ETH")
     .then((response) => response.json())
     .then((data) => {
