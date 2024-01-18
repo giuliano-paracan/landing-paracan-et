@@ -100,8 +100,9 @@ header {
 }
 
 .vision-and-values {
-    width: 80%;
+    width: 100%;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .vision-and-values ul {
@@ -306,7 +307,8 @@ main {
     margin-bottom: 20px;
 }
 
-.our-services::before {
+.our-services::before,
+.vision-and-values::before {
     content: "";
     position: absolute;
     top: 0;
@@ -319,12 +321,12 @@ main {
     z-index: -1;
 }
 
-.our-services__body .card {
+.card {
     background-color: #fff;
     border: 1px solid #fff;
 }
 
-.our-services__body .card:hover {
+.card:hover {
     background-color: #d5fafd;
     border: 1px solid #d5fafd;
 }
