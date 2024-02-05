@@ -41,7 +41,8 @@ nav.navbar {
 header {
     width: 100%;
     background-image: url('/static/img/itaipu-crypto.webp');
-    background-size: 1520px;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin-bottom: 40px;
 }
 
@@ -209,10 +210,14 @@ main {
 
 .our-operations {
     background-image: url('/static/img/our-operations.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .our-vision {
     background-image: url('/static/img/our-vision.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .our-vision-cards,
