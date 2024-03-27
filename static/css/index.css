@@ -193,8 +193,68 @@ main {
     width: 100%;
 }
 
+.our-team {
+    position: relative;
+}
+
+#our-team .our-team-board,
+#our-team .our-team-managers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 92%;
+}
+
+.our-team-header,
+.our-team-footer {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.our-team-card {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+
+    border-radius: var(--primary-border-radius);
+    box-shadow: var(--primary-box-shadow);
+    transition: 0.4s all ease;
+    height: 380px;
+    width: 450px;
+
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.our-team-card:hover {
+    background-color: #5ec0c52f;
+    border: 1px solid #5ec0c52f;
+}
+
+.our-team-card-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.our-team-card-title {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.our-team-card-description {
+    font-size: 16px;
+    text-align: center;
+}
+
 .our-vision,
-.our-operations {
+.our-operations,
+.our-team {
     padding: 30px;
     margin-top: 20px;
     margin-bottom: 40px;
@@ -320,7 +380,8 @@ main {
 }
 
 .our-services::before,
-.vision-and-values::before {
+.vision-and-values::before,
+.our-team::before {
     content: "";
     position: absolute;
     top: 0;
